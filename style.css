@@ -42,13 +42,7 @@ h1, h2, h3, h4, p {
     justify-content: space-between;
 }
 
-#check {
-    display: none;
-}
 
-.right-side :checked ~ .burger-menu {
-    display: flex;
-}
 
 .header-container .header-container-wrapper .left-side {
     display: flex;
@@ -78,13 +72,20 @@ h1, h2, h3, h4, p {
     gap: 24px;
 }
 
-.header-container .header-container-wrapper .left-side .menu .menu-item {
+.header-container .header-container-wrapper .left-side .menu .menu-item a {
     font-size: 20px;
     font-weight: 500;
     line-height: 27px;
     color: rgba(255, 255, 255, 1);
+    text-decoration: none;
     cursor: pointer;
 }
+
+.header-container .header-container-wrapper .left-side .menu .menu-item a:hover {
+    color: rgba(245, 250, 147, 1);
+} 
+
+
 
 .header-container .header-container-wrapper .right-side .right-side-button1 {
     padding: 8px 16px;
@@ -98,41 +99,58 @@ h1, h2, h3, h4, p {
     border-radius: 16px;
     background: rgba(118, 117, 123, 1);
     cursor: pointer;
+    display: none;
 }
 
 .header-container .header-container-wrapper .right-side .right-side-button1 {
     display: block;
 }
 
-.header-container .header-container-wrapper .right-side .right-side-button2 {
+.header-container .header-container-wrapper .right-side .right-side-button2 .icon-cross{
     display: none;
 }
 
 .header-container .burger-menu {
     display: none;
     flex-direction: column;
-    gap: 60px;
+    gap: 30px;
     padding: 18px 24px;
     border-radius: 32px;
     background: rgba(51, 51, 51, 1);
     position: absolute;
-    top: 4px;
-    right: -1px;
+    top: 60px;
+    right: 0px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    position: absolute;
+    
 }
 
-.header-container .burger-menu .button-cross-wrapper {
-    display: flex;
-    justify-content: flex-end;
+
+#check {
+    display: none;
+    position: absolute;
 }
 
-.header-container .burger-menu .button-cross-wrapper .burger-button-cross {
-    background: rgba(118, 117, 123, 1);
-    max-width: 56px;
-    width: 100%;
-    border-radius: 16px;
-    padding: 8px 16px 8px 16px;
+.label {
+    position: relative;
+}
+
+.right-side :checked ~ .burger-menu {
     display: flex;
-    cursor: pointer;
+} 
+
+.header-container .header-container-wrapper .right-side :checked ~ .label .icon-cross {
+    display: flex;
+    
+}
+
+.header-container .header-container-wrapper .right-side :checked ~ .label .icon-burger {
+    display: none;
+}
+
+.header-container .header-container-wrapper .right-side :checked ~ .left-side {
+    display: none;
 }
 
 .header-container .burger-menu .burger-menu-items {
@@ -178,14 +196,12 @@ h1, h2, h3, h4, p {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    background: url(./icons/about-photo.svg) no-repeat right;
-    background-position: 556px 0;
 }
 
 .container .about .about-top {
     display: flex;
     align-items: center;
-    gap: 17px;
+    
 }
 
 .container .about .about-text {
@@ -200,11 +216,11 @@ h1, h2, h3, h4, p {
     font-weight: 800;
     line-height: 75px;
     color: rgba(255, 255, 255, 1);
-    margin-top: 14px;
+    padding-top: 14px;
 } 
 
 .container .about .about-text .about-text-icon {
-    margin: 3px 264px 24px 57px;
+    padding: 3px 264px 24px 57px;
 }
 
 .container .about .about-text .about-text-description {
@@ -212,7 +228,12 @@ h1, h2, h3, h4, p {
     font-weight: 500;
     line-height: 28px;
     color: rgba(255, 255, 255, 1);
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+.container .about .about-top .about-photo img {
+    max-width: 400px;
+    
 }
 
 .container .about .about-bottom {
@@ -463,20 +484,18 @@ h1, h2, h3, h4, p {
 	suffix: " ";
 }
 .markers {
-	margin: 0 0 20px 24px;
-	padding: 0;
+	padding: 0 0 0px 24px;
 	list-style-type: marker-font;
+    margin: 0;
 }
 .markers li::marker {
 	font-family: 'Material Icons';
-	
 	line-height: 1;
 	font-size: 14px;
 }
 .markers li {
-	margin: 7px 0;
 	
-    padding: 0 0 0 7px;
+    padding: 4px 0 4px 4px;
     font-size: 17px;
     font-weight: 600;
     line-height: 24px;
@@ -533,7 +552,7 @@ details:open > summary {
 
 footer {
     margin-top: 80px;
-    margin-bottom: 100px;
+    -bottom: 100px;
 }
 
 .container .footer-container {
@@ -576,6 +595,10 @@ footer {
     gap: 20px;
 }
 
+.container .footer-container .social-links .social-links-icons a {
+    cursor: pointer;
+}
+
 .container .footer-container .footer-info {
     display: flex;
     flex-direction: column;
@@ -588,9 +611,22 @@ footer {
     color: rgba(255, 255, 255, 1);
 }
 
+.container .footer-container .footer-info a {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.container .footer-container .footer-info a:hover {
+    color: rgba(245, 250, 147, 1);
+}
+
 .container .chat {
     display: flex;
     justify-content: flex-end;
+    padding-top: 100px;
 }
 
 
@@ -613,7 +649,8 @@ footer {
    }
 
    .header-container .burger-menu {
-        width: 728px;
+       
+        width: 100%;
    }
 
    .menu-item {
@@ -675,6 +712,10 @@ footer {
        height: 496px;
     }
 
+    .container .pricing-plans .pricing-plan .plan.premium .plan-wrapper .plan-description .plan-description-text {
+        height: 48px;
+    }
+
     .container .pricing-plans .pricing-plan .plan.premium {
         height: 496px;
     }
@@ -713,12 +754,12 @@ footer {
     }
 
     .header-container .burger-menu {
-        width: 335px;
+        width: 100%;
    }
 
     .container .about {
         background: url(./icons/about-photo-375.svg) no-repeat right;
-        background-position: 100px 0;
+        background-position: 95px 0;
     }
 
     .about .about-top .about-text {
@@ -733,9 +774,7 @@ footer {
     }
 
     .about .about-top .about-text .about-text-icon {
-        margin-left: 0;
-        margin-bottom: 29px; 
-        margin-right: 0;       
+        padding: 0 0 29px 0;       
     }
 
     .about .about-top .about-text .about-text-icon img {
