@@ -34,20 +34,21 @@ h1, h2, h3, h4, p {
     display: flex; 
     flex-direction: column;
     padding: 18px 24px;
+    height: 76px;
     position: relative;
 }
 
 .header-container .header-container-wrapper {
     display: flex;
     justify-content: space-between;
-}
-
-
+    position: relative;
+} 
 
 .header-container .header-container-wrapper .left-side {
     display: flex;
     gap: 41px;
     align-items: center;
+    position: absolute;
 }
 
 .header-container .header-container-wrapper .left-side .logo-container {
@@ -85,71 +86,52 @@ h1, h2, h3, h4, p {
     color: rgba(245, 250, 147, 1);
 } 
 
-
-
-.header-container .header-container-wrapper .right-side .right-side-button1 {
-    padding: 8px 16px;
+.header-container .header-container-wrapper .right-side-button1 {
+    padding: 8px 16px 4px 16px;
     border-radius: 16px;
     background: rgba(235, 235, 235, 1);
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
-.header-container .header-container-wrapper .right-side .right-side-button2 {
-    padding: 8px 16px 4px 16px;
+.header-container .header-container-wrapper .label .right-side-button2 {
+    padding: 8px 16px 6px 16px;
     border-radius: 16px;
     background: rgba(118, 117, 123, 1);
-    cursor: pointer;
-    display: none;
+    cursor: pointer;  
 }
 
-.header-container .header-container-wrapper .right-side .right-side-button1 {
-    display: block;
-}
-
-.header-container .header-container-wrapper .right-side .right-side-button2 .icon-cross{
+.header-container .header-container-wrapper .label .right-side-button2 .icon-cross{
     display: none;
 }
 
 .header-container .burger-menu {
     display: none;
     flex-direction: column;
-    gap: 30px;
+    gap: 54px;
     padding: 18px 24px;
     border-radius: 32px;
     background: rgba(51, 51, 51, 1);
     position: absolute;
-    top: 60px;
-    right: 0px;
-    border-bottom-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    position: absolute;
-    
+    top: -18px;
+    left: -24px;   
+    width: 100%;
 }
 
-
-#check {
+.header-container .header-container-wrapper .label {
     display: none;
-    position: absolute;
 }
 
-.label {
-    position: relative;
-}
-
-.right-side :checked ~ .burger-menu {
+.header-container .header-container-wrapper :checked ~ .burger-menu {
     display: flex;
 } 
 
-.header-container .header-container-wrapper .right-side :checked ~ .label .icon-cross {
+.header-container .header-container-wrapper :checked ~ .label .icon-cross {
     display: flex;
-    
 }
 
-.header-container .header-container-wrapper .right-side :checked ~ .label .icon-burger {
-    display: none;
-}
-
-.header-container .header-container-wrapper .right-side :checked ~ .left-side {
+.header-container .header-container-wrapper :checked ~ .label .icon-burger {
     display: none;
 }
 
@@ -157,6 +139,7 @@ h1, h2, h3, h4, p {
     display: flex;
     flex-direction: column;
     gap: 0;
+    padding-top: 94px;
 }
 
 .header-container .burger-menu .burger-menu-items .burger-menu-item {
@@ -632,25 +615,19 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    .header-container {
-        position: relative;
-    }
-
-    .header-container .header-container-wrapper {
-        gap: 0;
-    }
-
-    .header-container .header-container-wrapper .right-side .right-side-button1 {
+    .header-container .header-container-wrapper .right-side-button1 {
         display: none;    
-   } 
+   }   
 
-    .header-container .header-container-wrapper .right-side .right-side-button2 {
+   .header-container .header-container-wrapper .label {
         display: block;
-   }
+        position: absolute;
+        z-index: 2;
+        right: 0;
+    }
 
    .header-container .burger-menu {
-       
-        width: 100%;
+        width: 728px;
    }
 
    .menu-item {
@@ -744,17 +721,8 @@ footer {
 
 @media screen and (max-width: 375px) {
 
-    .header-container {
-        gap: 40px;
-    }
-
-    .header-container {
-        gap: 0px;
-        width: 335px;
-    }
-
     .header-container .burger-menu {
-        width: 100%;
+         width: 335px;
    }
 
     .container .about {
