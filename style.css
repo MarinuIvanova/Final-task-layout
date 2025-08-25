@@ -117,6 +117,7 @@ h1, h2, h3, h4, p {
     top: -18px;
     left: -24px;   
     width: 100%;
+    z-index: 1;
 }
 
 .header-container .header-container-wrapper .label {
@@ -184,7 +185,7 @@ h1, h2, h3, h4, p {
 .container .about .about-top {
     display: flex;
     align-items: center;
-    
+    position: relative;
 }
 
 .container .about .about-text {
@@ -214,9 +215,14 @@ h1, h2, h3, h4, p {
     padding-bottom: 50px;
 }
 
+.container .about .about-top .about-photo {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .container .about .about-top .about-photo img {
-    max-width: 400px;
-    
+    max-width: 382px;
 }
 
 .container .about .about-bottom {
@@ -302,13 +308,211 @@ h1, h2, h3, h4, p {
     color: rgba(255, 255, 255, 1);
 }
 
-.container .work-experience {
+.container .work-experience-wrapper {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
-.container .work-experience .work-experience-bottom {
+.work-experience-top {
+    height: 430px;
+    position: relative;
+}
+
+.work-experience {
+    width: 545px;
+   
+    height: 324px;
+    border: 0.75px solid rgba(51, 51, 51, 1);
+    border-radius: 24px;
+    color: white;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: absolute;
+    top: 106px;
+    left: 45px;
+}
+ 
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(170, 219, 107, 1);
+}
+
+.company{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.company .period {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    color: #76757B;
+}
+
+.company-link a {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    color:#76757B ;
+}
+
+.job .position {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.about-me {
+    max-width: 630px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    border: 2px solid rgba(51, 51, 51, 1);
+    border-radius: 24px;
+    padding: 29px 72px;
+    position: absolute;
+    top: 74px;
+    left: 160px;
+    z-index: 2;
+    background: rgba(20, 14, 23, 1);
+}
+
+.my-photo {
+    max-width: 182px;
+    width: 100%;
+}
+
+.short-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #FFFFFF;
+    max-width: 251px;
+}    
+
+.my-name {
+    font-weight: 800;
+    font-size: 31px;
+    line-height: 34px;
+}
+
+.description {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.write-action {
+    margin-top: 19px;
+    background: rgba(249, 214, 158, 1);
+    padding: 8px 6px;
+    max-width: 105px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.write-action a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 78px;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 11px;
+}
+
+.write-action .vector {
+    width: 10px;
+}
+
+.work-experience-top .item {
+    max-width: 190px;
+    
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background: rgba(255, 175, 176, 1);
+    gap: 12px;
+    align-items: center;
+    border-radius: 21px;
+    padding: 18px;
+    position: absolute;
+    left: 680px;
+}
+
+.work-experience-top .item .project-photo img {
+    width: 160px;
+}
+
+.work-experience-top .item .project {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+}
+
+.work-experience-top .item .project .project-name {
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 35px;
+}
+
+.work-experience-top .item .project .project-description {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.work-experience-top .item .show-project {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.work-experience-top .item .button {
+    padding: 12px 9px;
+    border-radius: 12px;
+    border: 0.66px solid rgba(51, 51, 51, 1);
+    max-width: 118px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.work-experience-top .item .button a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.work-experience-top .item .button img {
+    width: 12px;
+}
+
+.container .work-experience-wrapper .work-experience-bottom {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -317,21 +521,21 @@ h1, h2, h3, h4, p {
     padding: 24px;
 }
 
-.container .work-experience .work-experience-bottom span {
+.container .work-experience-wrapper .work-experience-bottom span {
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
     color: rgba(255, 255, 255, 1);
 }
 
-.container .work-experience .work-experience-bottom .button-work {   
+.container .work-experience-wrapper .work-experience-bottom .button-work {   
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: flex-end;
 }
 
-.container .work-experience .work-experience-bottom .button-work a {
+.container .work-experience-wrapper .work-experience-bottom .button-work a {
     font-size: 16px;
     font-weight: 600;
     color: rgba(255, 255, 255, 1);
@@ -676,8 +880,207 @@ footer {
         flex-direction: column;
    }
 
-    .container .work-experience .work-experience-top img {
-        width: 720px;
+    
+
+    .container .work-experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    }
+
+    .work-experience-top {
+        height: 310px;
+        width: 728px;
+    }
+
+    .work-experience {
+        width: 392px;
+        height: 233px;
+        border: 0.54px solid rgba(51, 51, 51, 1);
+        border-radius: 17px;
+        color: white;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 76px;
+        left: 36px;
+    }
+    
+    .job-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 14px;
+        color: rgba(170, 219, 107, 1);
+    }
+
+    .company{
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .company .period {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+        color: #76757B;
+    }
+
+    .company-link a {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+    
+        color:#76757B ;
+    }
+
+    .job .position {
+        margin-top: 0;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .about-me {
+        max-width: 473px;
+        display: flex;
+        align-items: center;
+        gap: 57px;
+        border: 1.5px solid rgba(51, 51, 51, 1);
+        border-radius: 17px;
+        padding: 21px 52px;
+        position: absolute;
+        top: 53px;
+        left: 123px;
+        z-index: 2;
+        background: rgba(20, 14, 23, 1);
+    }
+
+    .my-photo {
+        max-width: 131px;
+        width: 100%;
+    }
+
+    .short-description {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        color: #FFFFFF;
+        max-width: 180px;
+    }    
+
+    .my-name {
+        font-weight: 800;
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .description {
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 9px;
+    }
+
+    .write-action {
+        margin-top: 19px;
+        background: rgba(249, 214, 158, 1);
+        padding: 6px 4px;
+        max-width: 76px;
+        text-align: center;
+        border-radius: 6px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .write-action a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        width: 56px;
+        font-weight: 600;
+        font-size: 6px;
+        line-height: 8px;
+    }
+
+    .write-action .vector {
+        width: 8px;
+    }
+
+    .work-experience-wrapper .work-experience-top .item {
+        max-width: 158px;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        background: rgba(255, 175, 176, 1);
+        gap: 11px;
+        align-items: center;
+        border-radius: 15px;
+        padding: 15px;
+        position: absolute;
+        left: 525px;
+    }
+
+    .work-experience-top .item .project-photo img {
+        width: 122px;
+    }
+
+    .work-experience-top .item .project {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+    }
+
+    .work-experience-top .item .project .project-name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .work-experience-top .item .project .project-description {
+        font-weight: 500;
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .work-experience-top .item .show-project {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .work-experience-top .item .button {
+        padding: 8px 6px;
+        border-radius: 8px;
+        border: 0.47px solid rgba(51, 51, 51, 1);
+        max-width: 85px;
+        width: 100%;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+    }
+
+    .work-experience-top .item .button a {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 12px;
+        text-align: center;
+    }
+
+    .work-experience-top .item .button img {
+        width: 9px;
     }
 
     .container .work-experience .work-experience-bottom .work-experience-bottom-span {
@@ -778,6 +1181,203 @@ footer {
 
     .container .work-experience .work-experience-top img {
         width: 335px;
+    }
+
+    
+    .work-experience-top {
+        height: 146px;
+        width: 335px;
+        
+    }
+
+    .work-experience {
+        width: 182px;
+        height: 108px;
+        border: 0.25px solid rgba(51, 51, 51, 1);
+        border-radius: 8px;
+        color: white;
+        padding: 6px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        position: absolute;
+        top: 36px;
+        left: 16px;
+    }
+    
+    .job-list {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    h3 {
+        font-weight: 600;
+        font-size: 6px;
+        line-height: 6px;
+        color: rgba(170, 219, 107, 1);
+    }
+
+    .company{
+        font-weight: 500;
+        font-size: 6px;
+        line-height: 7px;
+    }
+
+    .company .period {
+        font-weight: 500;
+        font-size: 4px;
+        line-height: 6px;
+        color: #76757B;
+    }
+
+    .company-link a {
+        font-weight: 500;
+        font-size: 4px;
+        line-height: 6px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+    
+        color:#76757B ;
+    }
+
+    .job .position {
+        margin-top: 0px;
+        font-weight: 500;
+        font-size: 4px;
+        line-height: 6px;
+    }
+
+    .about-me {
+        max-width: 220px;
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        border: 0.67px solid rgba(51, 51, 51, 1);
+        border-radius: 8px;
+        padding: 10px 12px;
+        position: absolute;
+        top: 25px;
+        left: 57px;
+        z-index: 2;
+        background: rgba(20, 14, 23, 1);
+    }
+
+    .my-photo {
+        max-width: 61px;
+        width: 100%;
+    }
+
+    .short-description {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        color: #FFFFFF;
+        max-width: 84px;
+    }    
+
+    .my-name {
+        font-weight: 800;
+        font-size: 10px;
+        line-height: 11px;
+    }
+
+    .description {
+        font-weight: 500;
+        font-size: 4px;
+        line-height: 4px;
+    }
+
+    .write-action {
+        margin-top: 9px;
+        background: rgba(249, 214, 158, 1);
+        padding: 2px 3px;
+        max-width: 35px;
+        text-align: center;
+        border-radius: 3px;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+
+    .write-action a {
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        width: 26px;
+        font-weight: 600;
+        font-size: 3px;
+        line-height: 4px;
+    }
+
+    .write-action .vector {
+        width: 4px;
+    }
+
+    .work-experience-wrapper .work-experience-top .item {
+        max-width: 73px;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        background: rgba(255, 175, 176, 1);
+        gap: 5px;
+        align-items: center;
+        border-radius: 7px;
+        padding: 7px;
+        position: absolute;
+        left: 244px;
+    }
+
+    .work-experience-top .item .project-photo img {
+        width: 57px;
+    }
+
+    .work-experience-top .item .project {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        
+    }
+
+    .work-experience-top .item .project .project-name {
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 12px;
+    }
+
+    .work-experience-top .item .project .project-description {
+        font-weight: 500;
+        font-size: 4px;
+        line-height: 6px;
+    }
+
+    .work-experience-top .item .show-project {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .work-experience-top .item .button {
+        padding: 3px 4px;
+        border-radius: 4px;
+        border: 0.2px solid rgba(51, 51, 51, 0.5);
+        max-width: 40px;
+        width: 100%;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+    }
+
+    .work-experience-top .item .button a {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 4px;
+        line-height: 5px;
+        text-align: center;
+    }
+
+    .work-experience-top .item .button img {
+        width: 4px;
     }
 
     .container .pricing-plans {
