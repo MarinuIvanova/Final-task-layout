@@ -1014,7 +1014,7 @@ footer {
     }
 
     .write-action .vector {
-        width: 8px;
+        width: 6px;
     }
 
     .work-experience-wrapper .work-experience-top .item {
@@ -1311,7 +1311,7 @@ footer {
     }
 
     .write-action .vector {
-        width: 4px;
+        width: 3px;
     }
 
     .work-experience-wrapper .work-experience-top .item {
@@ -1322,7 +1322,7 @@ footer {
         background: rgba(255, 175, 176, 1);
         gap: 5px;
         align-items: center;
-        border-radius: 7px;
+        border-radius: 32px;
         padding: 7px;
         position: absolute;
         left: 244px;
@@ -1363,7 +1363,7 @@ footer {
         max-width: 40px;
         width: 100%;
         display: flex;
-        gap: 2px;
+        gap: 3px;
         align-items: center;
     }
 
@@ -1378,6 +1378,15 @@ footer {
 
     .work-experience-top .item .button img {
         width: 4px;
+    }
+
+    .work-experience-top .work-experience .job-list .job .company-link {
+        position: relative;
+        height: 10px;
+    }
+
+     .work-experience-top .work-experience .job-list .job .company-link a {
+        position: absolute;
     }
 
     .container .pricing-plans {
